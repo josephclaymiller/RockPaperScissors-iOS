@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
-
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -76,6 +77,8 @@ class ViewController: UIViewController {
         case .lose:
             self.view.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
         }
+        // Set score label
+        scoreLabel.text = "Win:\(gameManager.wins)    Lose:\(gameManager.losses)    Draw:\(gameManager.ties)"
     }
     
     func gameMessage(currentState: GameState) -> String {

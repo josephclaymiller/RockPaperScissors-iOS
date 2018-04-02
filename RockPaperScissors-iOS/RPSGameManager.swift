@@ -23,6 +23,9 @@ class GameManager {
     var gameState: GameState {
         return self.game.gameState!
     }
+    private(set) var wins = 0
+    private(set) var losses = 0
+    private(set) var ties = 0
     
     init() {
         newGame()
@@ -35,6 +38,16 @@ class GameManager {
     func playAI(playerSign: Sign) {
         let opponentSign = randomSign()
         let matchResult: GameState = game.playMatch(playerSign: playerSign, opponentSign: opponentSign)
+        switch matchResult {
+        case .win:
+            wins += 1
+        case .lose:
+            losses += 1
+        case .draw:
+            ties += 1
+        default:
+            print("Invalid game result")
+        }
         let match = Match(player: playerSign, opponent: opponentSign, result: matchResult)
         self.currentMatch = match
         matches.append(match)

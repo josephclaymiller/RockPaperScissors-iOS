@@ -18,23 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rev-RR-YqP">
-                                <rect key="frame" x="52" y="186.5" width="271" height="294.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rev-RR-YqP">
+                                <rect key="frame" x="3.5" y="249.5" width="368" height="168.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZC5-cF-XpO">
-                                        <rect key="frame" x="97" y="0.0" width="77" height="86"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock, Paper, Scissors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GX-Nz-e1F">
-                                        <rect key="frame" x="53.5" y="106" width="164" height="20.5"/>
+                                        <rect key="frame" x="102" y="0.0" width="164" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Roe-0H-5BQ">
-                                        <rect key="frame" x="0.0" y="146.5" width="271" height="98"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="368" height="98"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEt-rx-2nl">
                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="98"/>
@@ -60,10 +54,16 @@
                                                     <action selector="scissorsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfc-RM-bhw"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZC5-cF-XpO">
+                                                <rect key="frame" x="291" y="6" width="77" height="86"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXU-Zz-Ry1">
-                                        <rect key="frame" x="100" y="264.5" width="71" height="30"/>
+                                        <rect key="frame" x="148.5" y="138.5" width="71" height="30"/>
                                         <state key="normal" title="Play Again"/>
                                         <connections>
                                             <action selector="playAgainButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DfA-2x-tOE"/>
@@ -71,10 +71,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win: 0 Lose: 0 Tie: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8r-Ze-6y2">
+                                <rect key="frame" x="109.5" y="587.5" width="156.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rev-RR-YqP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5ng-xn-cbm"/>
+                            <constraint firstItem="W8r-Ze-6y2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EIS-Ym-FSA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W8r-Ze-6y2" secondAttribute="bottom" constant="10" id="Eni-hx-k3c"/>
                             <constraint firstItem="rev-RR-YqP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xzP-VM-JUl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -87,6 +95,7 @@
                         <outlet property="playAgainButton" destination="hXU-Zz-Ry1" id="MpD-9k-SEf"/>
                         <outlet property="rockButton" destination="sEt-rx-2nl" id="tfJ-lf-z4E"/>
                         <outlet property="scissorsButton" destination="RsN-qO-5Em" id="SU4-92-e4c"/>
+                        <outlet property="scoreLabel" destination="W8r-Ze-6y2" id="MR2-7O-chT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
