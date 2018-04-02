@@ -52,7 +52,7 @@ class HistoryTableViewController: UITableViewController {
             message += " vs "
             message += match.opponent.description.capitalized
             message += ". "
-            message += gameManager.matches[indexPath.row].result.message
+            message += "\(gameManager.matches[indexPath.row].result).".capitalized
             cell.textLabel!.text = message
         }
 

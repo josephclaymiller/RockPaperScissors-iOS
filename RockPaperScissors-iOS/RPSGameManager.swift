@@ -10,6 +10,12 @@ import Foundation
 
 var gameManager = GameManager()
 
+struct Match {
+    var player: Sign
+    var opponent: Sign
+    var result: GameState
+}
+
 class GameManager {
     var game: RPSGame!
     var matches = [Match]()
@@ -26,9 +32,5 @@ class GameManager {
         game.play(sign: playerSign)
         let match = Match(player: game.playerSign!, opponent: game.opponentSign!, result: game.gameState)
         matches.append(match)
-    }
-    
-    func gameMessage() -> String {
-        return game.gameState.message
     }
 }

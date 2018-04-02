@@ -13,24 +13,6 @@ enum GameState {
     var description: String {
         return "\(self)"
     }
-    var message: String {
-        switch self {
-        case .win:
-            return "You win!"
-        case .lose:
-            return "You lose."
-        case .draw:
-            return "It's a draw."
-        default:
-            return "Rock, Paper, Scissors"
-        }
-    }
-}
-
-struct Match {
-    var player: Sign
-    var opponent: Sign
-    var result: GameState
 }
 
 class RPSGame {

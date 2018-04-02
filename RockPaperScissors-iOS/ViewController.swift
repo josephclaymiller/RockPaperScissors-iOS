@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     
     func updateUI() {
         // Set the status label’s text property to an appropriate message.
-        gameStatusLabel.text = gameManager.gameMessage()
+        gameStatusLabel.text = gameMessage(currentState: gameManager.game.gameState!)
         switch gameManager.game.gameState! {
         case .start:
             opponentSignLabel.text = ""
@@ -75,6 +75,20 @@ class ViewController: UIViewController {
             self.view.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         case .lose:
             self.view.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        }
+    }
+    
+    func gameMessage(currentState: GameState) -> String {
+        print(currentState)
+        switch currentState {
+        case .win:
+            return "You win!"
+        case .lose:
+            return "You lose."
+        case .draw:
+            return "It's a draw."
+        default:
+            return "Rock, Paper, Scissors"
         }
     }
 }
