@@ -79,7 +79,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Play" id="NSz-PP-OCw"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="play_glyph" id="NSz-PP-OCw"/>
                     <connections>
                         <outlet property="gameStatusLabel" destination="0GX-Nz-e1F" id="5R4-r7-CYo"/>
                         <outlet property="opponentSignLabel" destination="ZC5-cF-XpO" id="LyE-OA-zaS"/>
@@ -116,7 +116,7 @@
                             <outlet property="delegate" destination="gSZ-Q1-1sS" id="kt3-xq-OEl"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="History" id="0UM-4K-ovl"/>
+                    <tabBarItem key="tabBarItem" title="History" image="highScores_glyph" id="0UM-4K-ovl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="510-Os-Jfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +128,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sHa-ss-KFE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zW4-c5-14w">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -141,4 +142,8 @@
             <point key="canvasLocation" x="-345" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="highScores_glyph" width="24" height="24"/>
+        <image name="play_glyph" width="24" height="24"/>
+    </resources>
 </document>
