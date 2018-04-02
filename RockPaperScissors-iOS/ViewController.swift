@@ -16,53 +16,49 @@ class ViewController: UIViewController {
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     @IBOutlet weak var playAgainButton: UIButton!
-    
-    var gameState: GameState!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameState = .start
-        updateUI(gameState: gameState)
+        updateUI()
     }
     
     @IBAction func rockButtonTapped(_ sender: UIButton) {
-        play(sign: .rock)
+        play(playerSign: .rock)
         rockButton.isEnabled = false
         paperButton.isHidden = true
         scissorsButton.isHidden = true
     }
     
     @IBAction func paperButtonTapped(_ sender: UIButton) {
-        play(sign: .paper)
+        play(playerSign: .paper)
         paperButton.isEnabled = false
         rockButton.isHidden = true
         scissorsButton.isHidden = true
     }
     
     @IBAction func scissorsButtonTapped(_ sender: UIButton) {
-        play(sign: .scissors)
+        play(playerSign: .scissors)
         scissorsButton.isEnabled = false
         rockButton.isHidden = true
         paperButton.isHidden = true
     }
     
     @IBAction func playAgainButtonTapped(_ sender: UIButton) {
-        gameState = .start
-        updateUI(gameState: gameState)
+        gameManager.newGame()
+        updateUI()
     }
     
-    func play(sign: Sign) {
-        let opponentSign = randomSign()
-        opponentSignLabel.text = opponentSign.emoji
-        gameState = sign.takeTurn(opponentSign)
-        updateUI(gameState: gameState)
+    func play(playerSign: Sign) {
+        gameManager.play(playerSign: playerSign)
+        opponentSignLabel.text = gameManager.game.opponentSign!.emoji
         playAgainButton.isHidden = false
+        updateUI()
     }
     
-    func updateUI(gameState: GameState) {
+    func updateUI() {
         // Set the status label’s text property to an appropriate message.
-        gameStatusLabel.text = gameState.message
-        switch gameState {
+        gameStatusLabel.text = gameManager.gameMessage()
+        switch gameManager.game.gameState! {
         case .start:
             opponentSignLabel.text = ""
             playAgainButton.isHidden = true

@@ -24,7 +24,9 @@ func randomSign() -> Sign {
 
 enum Sign {
     case rock, paper, scissors
-    
+    var description: String {
+        return "\(self)"
+    }
     var emoji: String {
         switch self {
         case .rock: return "👊"
@@ -32,28 +34,4 @@ enum Sign {
         case .scissors: return "✌️"
         }
     }
-    
-    func takeTurn(_ opponentTurn: Sign) -> GameState {
-        switch self {
-        case .rock:
-            switch opponentTurn {
-            case .rock: return GameState.draw
-            case .paper: return GameState.lose
-            case .scissors: return GameState.win
-            }
-        case .paper:
-            switch opponentTurn {
-            case .rock: return GameState.win
-            case .paper: return GameState.draw
-            case .scissors: return GameState.lose
-            }
-        case .scissors:
-            switch opponentTurn {
-            case .rock: return GameState.lose
-            case .paper: return GameState.win
-            case .scissors: return GameState.draw
-            }
-        }
-    }
-    
 }

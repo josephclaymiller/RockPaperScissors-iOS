@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1BC0352071E5D4004C93D4 /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BC0342071E5D4004C93D4 /* RPSGame.swift */; };
+		CD1BC0372071E9BB004C93D4 /* RPSGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BC0362071E9BB004C93D4 /* RPSGameManager.swift */; };
+		CD1BC0392071EFE6004C93D4 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BC0382071EFE6004C93D4 /* HistoryTableViewController.swift */; };
 		CD50EEBA205EEED000FEE178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50EEB9205EEED000FEE178 /* AppDelegate.swift */; };
 		CD50EEBC205EEED000FEE178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50EEBB205EEED000FEE178 /* ViewController.swift */; };
 		CD50EEBF205EEED000FEE178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD50EEBD205EEED000FEE178 /* Main.storyboard */; };
 		CD50EEC1205EEED000FEE178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD50EEC0205EEED000FEE178 /* Assets.xcassets */; };
 		CD50EEC4205EEED000FEE178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD50EEC2205EEED000FEE178 /* LaunchScreen.storyboard */; };
 		CD50EECE205EEEF800FEE178 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50EECD205EEEF800FEE178 /* Sign.swift */; };
-		CD50EED0205EEF0100FEE178 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50EECF205EEF0100FEE178 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD1BC0342071E5D4004C93D4 /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
+		CD1BC0362071E9BB004C93D4 /* RPSGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameManager.swift; sourceTree = "<group>"; };
+		CD1BC0382071EFE6004C93D4 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		CD50EEB6205EEED000FEE178 /* RockPaperScissors-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RockPaperScissors-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD50EEB9205EEED000FEE178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD50EEBB205EEED000FEE178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +30,6 @@
 		CD50EEC3205EEED000FEE178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD50EEC5205EEED000FEE178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD50EECD205EEEF800FEE178 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
-		CD50EECF205EEF0100FEE178 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,9 @@
 				CD50EEC2205EEED000FEE178 /* LaunchScreen.storyboard */,
 				CD50EEC5205EEED000FEE178 /* Info.plist */,
 				CD50EECD205EEEF800FEE178 /* Sign.swift */,
-				CD50EECF205EEF0100FEE178 /* GameState.swift */,
+				CD1BC0342071E5D4004C93D4 /* RPSGame.swift */,
+				CD1BC0362071E9BB004C93D4 /* RPSGameManager.swift */,
+				CD1BC0382071EFE6004C93D4 /* HistoryTableViewController.swift */,
 			);
 			path = "RockPaperScissors-iOS";
 			sourceTree = "<group>";
@@ -143,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD50EEBC205EEED000FEE178 /* ViewController.swift in Sources */,
-				CD50EED0205EEF0100FEE178 /* GameState.swift in Sources */,
+				CD1BC0352071E5D4004C93D4 /* RPSGame.swift in Sources */,
+				CD1BC0392071EFE6004C93D4 /* HistoryTableViewController.swift in Sources */,
+				CD1BC0372071E9BB004C93D4 /* RPSGameManager.swift in Sources */,
 				CD50EEBA205EEED000FEE178 /* AppDelegate.swift in Sources */,
 				CD50EECE205EEEF800FEE178 /* Sign.swift in Sources */,
 			);
