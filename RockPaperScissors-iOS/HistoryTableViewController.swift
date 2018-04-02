@@ -54,8 +54,17 @@ class HistoryTableViewController: UITableViewController {
             message += ". "
             message += "\(gameManager.matches[indexPath.row].result).".capitalized
             cell.textLabel!.text = message
+            switch match.result {
+            case .win:
+                cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+            case .lose:
+                cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+            case .draw:
+                cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            default:
+                cell.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+            }
         }
-
         return cell
     }
  
