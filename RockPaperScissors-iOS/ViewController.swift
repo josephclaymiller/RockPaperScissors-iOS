@@ -50,15 +50,15 @@ class ViewController: UIViewController {
     
     func play(playerSign: Sign) {
         gameManager.playAI(playerSign: playerSign)
-        opponentSignLabel.text = gameManager.game.opponentSign!.emoji
+        opponentSignLabel.text = gameManager.currentMatch!.opponent.emoji
         playAgainButton.isHidden = false
         updateUI()
     }
     
     func updateUI() {
         // Set the status label’s text property to an appropriate message.
-        gameStatusLabel.text = gameMessage(currentState: gameManager.game.gameState!)
-        switch gameManager.game.gameState! {
+        gameStatusLabel.text = gameMessage(currentState: gameManager.gameState)
+        switch gameManager.gameState {
         case .start:
             opponentSignLabel.text = ""
             playAgainButton.isHidden = true

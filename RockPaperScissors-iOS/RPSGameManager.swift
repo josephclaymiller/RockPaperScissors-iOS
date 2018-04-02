@@ -17,8 +17,12 @@ struct Match {
 }
 
 class GameManager {
-    var game: RPSGame!
-    var matches = [Match]()
+    private var game: RPSGame!
+    private(set) var matches = [Match]()
+    private(set) var currentMatch: Match?
+    var gameState: GameState {
+        return self.game.gameState!
+    }
     
     init() {
         newGame()
@@ -32,6 +36,7 @@ class GameManager {
         let opponentSign = randomSign()
         let matchResult: GameState = game.playMatch(playerSign: playerSign, opponentSign: opponentSign)
         let match = Match(player: playerSign, opponent: opponentSign, result: matchResult)
+        self.currentMatch = match
         matches.append(match)
     }
 }
