@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     func play(playerSign: Sign) {
-        gameManager.play(playerSign: playerSign)
+        gameManager.playAI(playerSign: playerSign)
         opponentSignLabel.text = gameManager.game.opponentSign!.emoji
         playAgainButton.isHidden = false
         updateUI()
@@ -79,7 +79,6 @@ class ViewController: UIViewController {
     }
     
     func gameMessage(currentState: GameState) -> String {
-        print(currentState)
         switch currentState {
         case .win:
             return "You win!"

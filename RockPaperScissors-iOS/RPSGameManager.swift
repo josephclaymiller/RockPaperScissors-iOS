@@ -28,9 +28,10 @@ class GameManager {
         game = RPSGame()
     }
     
-    func play(playerSign: Sign) {
-        game.play(sign: playerSign)
-        let match = Match(player: game.playerSign!, opponent: game.opponentSign!, result: game.gameState)
+    func playAI(playerSign: Sign) {
+        let opponentSign = randomSign()
+        let matchResult: GameState = game.playMatch(playerSign: playerSign, opponentSign: opponentSign)
+        let match = Match(player: playerSign, opponent: opponentSign, result: matchResult)
         matches.append(match)
     }
 }

@@ -16,40 +16,45 @@ enum GameState {
 }
 
 class RPSGame {
-    var playerSign: Sign?
-    var opponentSign: Sign?
-    var gameState: GameState!
-    var resultsMessage: String?
+    private(set) var playerSign: Sign?
+    private(set) var opponentSign: Sign?
+    private(set) var gameState: GameState!
+    private(set) var resultsMessage: String?
     
     init() {
         gameState = .start
     }
     
-    func play(sign: Sign) {
-        playerSign = sign
-        opponentSign = randomSign()
-        gameState = takeTurn()
+    func playMatch(playerSign: Sign, opponentSign: Sign) -> GameState {
+        self.playerSign = playerSign
+        self.opponentSign = opponentSign
+        self.gameState = takeTurn()
+        return gameState
     }
     
-    func takeTurn() -> GameState {
+    private func takeTurn() -> GameState {
+        if playerSign == nil || opponentSign == nil {
+            print("Must have a player sign and an opponent signx to take a turn.")
+            return .start
+        }
         switch playerSign! {
         case .rock:
             switch opponentSign! {
-            case .rock: return GameState.draw
-            case .paper: return GameState.lose
-            case .scissors: return GameState.win
+            case .rock: return .draw
+            case .paper: return .lose
+            case .scissors: return .win
             }
         case .paper:
             switch opponentSign! {
-            case .rock: return GameState.win
-            case .paper: return GameState.draw
-            case .scissors: return GameState.lose
+            case .rock: return .win
+            case .paper: return .draw
+            case .scissors: return .lose
             }
         case .scissors:
             switch opponentSign! {
-            case .rock: return GameState.lose
-            case .paper: return GameState.win
-            case .scissors: return GameState.draw
+            case .rock: return .lose
+            case .paper: return .win
+            case .scissors: return .draw
             }
         }
     }
